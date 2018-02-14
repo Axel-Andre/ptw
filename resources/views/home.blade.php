@@ -12,9 +12,9 @@
             </div>
             <h1>Pave the Way</h1>
             
-            <div>Conçu pour des trajets réguliers</div>
-            <div>Destiné à une échelle locale</div>
-            <div>Pensé pour une conduite responsable</div>
+            <div><i class="fa fa-btn fa-calendar"></i>Conçu pour des trajets réguliers</div>
+            <div><i class="fa fa-btn fa-map-marker"></i>Destiné à une échelle locale</div>
+            <div><i class="fa fa-btn fa-leaf"></i>Pensé pour une conduite responsable</div>
         </div>
     </div>
 </div>

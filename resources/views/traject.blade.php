@@ -31,9 +31,34 @@
     <input type="radio" id="ponctuel"
      name="statut" value="Ponctuel">
     <label for="ponctuel">Ponctuel</label>
+     </div>
+    <br/>
+    
+    <div>
+    <input type="radio" id="gratuit"
+     name="prix" value="Gratuit">
+    <label for="gratuit">Gratuit</label>
 
+    <input type="radio" id="payantl"
+     name="prix" value="Ponctuel">
+    <label for="payant">Payant</label>
+     </div>
+    <br/>
+    
+    <div>
+    <select>
+     <option>Supermarché</option>
+     <option>Restaurant</option>
+     <option>Cinéma</option>
+     <option>Loisirs</option>
+    </select>
+    <br/>
+    ou ajouter un tag spécifique
+    <input type="text" id="addtag"/>
+    </div>
+    
 
-  </div>
+ 
 
     <br/>
     

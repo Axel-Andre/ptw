@@ -45,9 +45,9 @@
             <div class="collapse navbar-collapse" id="app-navbar-collapse">
                 <!-- Left Side Of Navbar -->
                 <ul class="nav navbar-nav">
-                    <li><a href="{{ url('/') }}"><i class="fas fa-home"></i>Accueil</a></li>
-                     <li><a href="{{ url('/traject') }}">Mes Trajets</a></li>
-                      <li><a href="{{ url('/traject') }}">Rechercher des Trajets</a></li>
+                    <li><a href="{{ url('/') }}"><i class="fa fa-btn fa-home"></i>Accueil</a></li>
+                     <li><a href="{{ url('/traject') }}"><i class="fa fa-btn fa-car"></i>Mes Trajets</a></li>
+                      <li><a href="{{ url('/traject') }}"><i class="fa fa-btn fa-search"></i>Rechercher des Trajets</a></li>
                 </ul>
 
                 <!-- Right Side Of Navbar -->
@@ -63,8 +63,8 @@
                             </a>
 
                             <ul class="dropdown-menu" role="menu">
-                                <li><a href="{{ url('/logout') }}"><i class="fa fa-btn fa-sign-out"></i>Mon profil</a></li>
-                                <li><a href="{{ url('/logout') }}"><i class="fa fa-btn fa-sign-out"></i>Mes Messages</a></li>
+                                <li><a href="{{ url('/logout') }}"><i class="fa fa-btn fa-user"></i>Mon profil</a></li>
+                                <li><a href="{{ url('/messages') }}"><i class="fa fa-btn fa-envelope"></i>Mes Messages</a></li>
                                 <li><a href="{{ url('/logout') }}"><i class="fa fa-btn fa-sign-out"></i>Deconnexion</a></li>
                             </ul>
                         </li>

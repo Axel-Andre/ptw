@@ -27,8 +27,13 @@ Route::get('/contact', function () {
     return view('contact');
 });
 
-Route::get('/profile', function () {
+Route::get('/profile/general', function () {
     return view('profile');
+});
+
+
+Route::get('/information', function () {
+    return view('addinformation');
 });
 
 

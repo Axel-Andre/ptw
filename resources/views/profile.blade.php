@@ -5,25 +5,34 @@
  <a href="/profile" > Profil</a>
  <a href="/messages" >Messages</a>
 </div>
-<!--<div>-->
-<!--  <h2> Bienvenue sur votre profil</h2> <h1>{{ Auth::user()->name }} {{ Auth::user()->surname }}</h1> -->
-<!-- <p>Votre numéro de téléphone est le suivant : {{ Auth::user()-> phone}} </p>-->
-<!-- <p>Votre adresse est la suivante : {{ Auth::user()->address}}</p>-->
-<!-- <p>Votre e-mail est le suivant : {{ Auth::user()-> email}}</p>-->
-<!--</div>-->
+<div class="profil_container">
+<form class="profil_infos">
+   
+   <label for="surname">Nom</label>
+    <input type="text" id="surname" name="surname" value="{{ Auth::user()-> surname}}" /> 
+  
+   <label for="name">Prénom</label>
+   <input type="text" id="name" name="name" value="{{ Auth::user()-> name}}" /> 
+   
+   
+   <label for="birthday">Date de naissance</label>
+    <input type="date" name="surname" value="{{ Auth::user()-> birthday}}" /> 
+  
+   <label>Téléphone</label>
+   <p>{{ Auth::user()-> phone}}</p>
 
-<div class="profil_infos">
- <div class="oh">
-  <p>Téléphone</p>
-  <p>adresse</p>
-  <p>e-mail</p>
- </div>
- <div>
-  <p>{{ Auth::user()-> phone}}</p>
-  <p>{{ Auth::user()-> address}}</p>
-  <p>{{ Auth::user()-> email}}</p>
- </div>
+   <label>Adresse</label>
+   <p>{{ Auth::user()-> address}}</p>
+  
+   <label>e-mail</label>
+   <input type="email" id="profil_name" name="email" value="{{ Auth::user()-> email}}" /> 
+   
+   <p></p>
+ <input type="submit" value="modifier informations">
+ </form>
+  
 </div>
+
 
 
  
