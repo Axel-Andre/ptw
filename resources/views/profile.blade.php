@@ -2,7 +2,9 @@
 
 @section('content') 
 <div>
- <a href="/profile" > Profil</a>
+ 
+ <h1>Bienvenue sur votre profil {{ Auth::user()-> name}}</h1>
+ <a href="/profile/general" > Profil</a>
  <a href="/messages" >Messages</a>
 </div>
 <div class="profil_container">
@@ -19,7 +21,7 @@
     <input type="date" name="surname" value="{{ Auth::user()-> birthday}}" /> 
   
    <label>Téléphone</label>
-   <p>{{ Auth::user()-> phone}}</p>
+   <p>++33 {{ Auth::user()-> phone}}</p>
 
    <label>Adresse</label>
    <p>{{ Auth::user()-> address}}</p>

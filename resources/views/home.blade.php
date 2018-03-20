@@ -1,21 +1,45 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
+<div class="container" id="home_container">
     <div class="row">
         <div class="col-md-10 col-md-offset-1">
-            <div>
-                <form>
-                    <input type="text" placeholder="Rechercher une ville ou un lieu stratégique"/>
-                </form>
+            <div id="home_recherche">
+                <div id="home_recherche_buttons">
+                <button id="home_recherche_button_rec" onclick='modeRecherche("recurrent")'>Trajet récurrent</button>
+                <button id="home_recherche_button_pon" onclick='modeRecherche("ponctuel")'>Trajet Ponctuel</button>
+                </div>
                 
+                <div id="recherche_recurrente">
+                    <form action="/result">
+                        <input type="text" placeholder="Lieu de départ"/>
+                        <input type="date" />
+                        <input type="text" placeholder="Lieu d'arrivée"/>
+                        <div class=spacer></div>
+                        <input type="submit" value="Rechercher destination"/>
+                    </form>
+                </div>
+                <div id="recherche_ponctuelle">coucou</div>
             </div>
-            <h1>Pave the Way</h1>
+           
             
-            <div><i class="fa fa-btn fa-calendar"></i>Conçu pour des trajets réguliers</div>
-            <div><i class="fa fa-btn fa-map-marker"></i>Destiné à une échelle locale</div>
-            <div><i class="fa fa-btn fa-leaf"></i>Pensé pour une conduite responsable</div>
+            
         </div>
+        
     </div>
+    
+</div>
+<h1 id="title_homepage">Pave the Way</h1>
+<h2 id="undertitle_homepage">c'est quoi ?</h2>
+<div id="banner_container">
+<div id="banner_homepage">
+    <div id="center_banner">
+        <div><i class="fa fa-btn fa-calendar"></i><p>Conçu pour des trajets réguliers ou ponctuels</p></div>
+        <div><i class="fa fa-btn fa-map-marker"></i><p>Destiné à une échelle locale</p></div>
+        <div><i class="fa fa-btn fa-leaf"></i><p>Pensé pour une conduite responsable</p></div>
+    
+    </div>
+</div>
+    
 </div>
 @endsection

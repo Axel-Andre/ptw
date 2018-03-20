@@ -19,19 +19,6 @@ Route::get('/', function () {
     return view('home');
 });
 
-Route::get('/traject', function () {
-    return view('traject');
-});
-
-Route::get('/contact', function () {
-    return view('contact');
-});
-
-Route::get('/profile/general', function () {
-    return view('profile');
-});
-
-
 Route::get('/information', function () {
     return view('addinformation');
 });
@@ -41,10 +28,12 @@ Route::get('/testmap', function () {
     return view('testmap');
 });
 
-Route::get('/messages', function () {
-    return view('messages');
-});
 
+Route::get('/traject', 'HomeController@traject')->name('traject');
+Route::get('/contact', 'HomeController@contact');
+Route::get('/profile/general', 'HomeController@profile');
+Route::get('/messages', 'HomeController@messages');
+Route::get('/result', 'HomeController@result');
 
 Route::auth();
 

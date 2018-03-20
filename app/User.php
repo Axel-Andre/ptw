@@ -23,4 +23,8 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+    
+    public function trajets() {
+        return $this->hasMany('App\Traject', 'driver_id');
+    }
 }

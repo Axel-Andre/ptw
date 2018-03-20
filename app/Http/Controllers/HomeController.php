@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests;
 use Illuminate\Http\Request;
+use App\Traject;
+// use App\Auth;
 
 class HomeController extends Controller
 {
@@ -26,4 +28,34 @@ class HomeController extends Controller
     {
         return view('home');
     }
+    
+     public function traject()
+    {
+        $id = Auth::id();
+        $user = User::find($id);
+        return view('traject',['trajets'=>$user->trajects]);
+    }
+    
+    public function contact()
+    {
+        return view('contact');
+    }
+    
+    public function profile()
+    {
+        return view('profile');
+    }
+   
+     public function messages()
+    {
+        return view('messages');
+    }
+   
+
+      public function result()
+    {
+        return view('result');
+    }
+   
+    
 }
