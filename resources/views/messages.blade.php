@@ -6,6 +6,7 @@
 <a href="/messages" >Messages</a>
 </div>
  
+ 
 messages
  
  @endsection

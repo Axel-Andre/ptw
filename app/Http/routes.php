@@ -19,10 +19,6 @@ Route::get('/', function () {
     return view('home');
 });
 
-Route::get('/information', function () {
-    return view('addinformation');
-});
-
 
 Route::get('/testmap', function () {
     return view('testmap');
@@ -34,6 +30,11 @@ Route::get('/contact', 'HomeController@contact');
 Route::get('/profile/general', 'HomeController@profile');
 Route::get('/messages', 'HomeController@messages');
 Route::get('/result', 'HomeController@result');
+Route::post('/addtraject', "HomeController@addtraject")->middleware('auth');
+Route::post('/addlocation', "HomeController@addlocation")->middleware('auth');
+Route::post('/information', "HomeController@information")->middleware('auth');
+
+
 
 Route::auth();
 

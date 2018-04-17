@@ -9,7 +9,7 @@
     <title>Pave The Way</title>
       <!-- JavaScripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.3/jquery.min.js" integrity="sha384-I6F5OKECLVtK/BL+8iSLDEHowSAfUo76ZL9+kGAgTRdiByINKJaqTPH/QVNS1VDb" crossorigin="anonymous"></script>
-    
+    <!--<script src="{{secure_asset('js/jquery.pjax.js')}}"></script>-->
     <!-- Fonts -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css" integrity="sha384-XdYbMnZ/QjLh6iI4ogqCTaIjrFk87ip+ekIjefZch0Y+PvJ8CDYtEs1ipDmPorQ+" crossorigin="anonymous">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700">
@@ -36,8 +36,9 @@
     </style>
 </head>
 <body id="app-layout">
+    <!--<a id="logo-container" href="{{ url('/') }}"><img id="logo-img" src="{{secure_asset('css/logo.png')}}" /></a>-->
     <nav class="navbar navbar-default navbar-static-top">
-        <div class="container">
+        <div class="container" id="header-container">
             <div class="navbar-header">
 
                 <!-- Collapsed Hamburger -->
@@ -53,10 +54,11 @@
             <div class="collapse navbar-collapse" id="app-navbar-collapse">
                 <!-- Left Side Of Navbar -->
                 <ul class="nav navbar-nav">
+                    <li id="logo-container"><a href="{{ url('/') }}"><img id="logo-img" src="{{secure_asset('css/logo.png')}}" /></a></li>
                      <li class="header_my_trajects"><a href="{{ url('/traject') }}"><i class="fa fa-btn fa-car"></i>Mes Trajets</a></li>
                       <li class="header_add_traject"><a href="{{ url('/result') }}"><i class="fa fa-btn fa-search"></i>Rechercher des Trajets</a></li>
                
-                    <li><a href="{{ url('/') }}"><i class="fa fa-btn fa-home"></i>Accueil</a></li>
+                    <!--<li id="logo-container"><a href="{{ url('/') }}"><img id="logo-img" src="{{secure_asset('css/logo.png')}}" /></a></li>-->
                 </ul>
                 
                 
@@ -83,21 +85,10 @@
             </div>
         </div>
     </nav>
-
-<!--    
-    <div>
-        <h1>Rechercher un trajet</h1>
-         <label for="departure">Lieu de Départ</label>
-    <input type="text" name="departure"  id="autocomplete_address">
-    <br/>
     
-    <label for="arrival">Lieu d'Arrivée</label>
-    <input type="text" name="arrival"  id="autocomplete_address2">
-    <br/>
-</div>
-!-->
-
-    @yield('content')
+    <main id="pjax-container">
+        @yield('content')
+    </main>
     
     <footer>
         <p>PAVE THE WAY &copy</p>

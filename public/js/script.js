@@ -14,5 +14,15 @@ function modeRecherche(mode){
         $("#home_recherche_button_rec").css("color","rgba(255,255,255,1)");
          $("#home_recherche_button_pon").css("color","rgba(255,223,0,1)");
     }
-    
+}
+
+
+function trajecttype(type) {
+    if(type === "recurrent"){
+        $("#displaytags").css("display","none");
+        $("#displayheurer").css("display","block");
+    } else if (type ==="ponctuel"){
+        $("#displaytags").css("display","block");
+        $("#displayheurer").css("display","none");
+    }
 }

@@ -8,8 +8,8 @@
  <a href="/messages" >Messages</a>
 </div>
 <div class="profil_container">
-<form class="profil_infos">
-   
+<form class="profil_infos" method="post" action="/information">
+     {{ csrf_field() }}
    <label for="surname">Nom</label>
     <input type="text" id="surname" name="surname" value="{{ Auth::user()-> surname}}" /> 
   
@@ -18,19 +18,20 @@
    
    
    <label for="birthday">Date de naissance</label>
-    <input type="date" name="surname" value="{{ Auth::user()-> birthday}}" /> 
+    <input type="date" name="birthday" value="{{ Auth::user()-> birthday}}" /> 
   
    <label>Téléphone</label>
-   <p>++33 {{ Auth::user()-> phone}}</p>
+   <input type="number" name="number" value="{{ Auth::user()-> phone}}"/>
 
    <label>Adresse</label>
-   <p>{{ Auth::user()-> address}}</p>
+   <input type="text" name="address" value="{{ Auth::user()-> address}}"/>
+  
   
    <label>e-mail</label>
    <input type="email" id="profil_name" name="email" value="{{ Auth::user()-> email}}" /> 
    
    <p></p>
- <input type="submit" value="modifier informations">
+ <button id="profile_submit" type="submit" value="modifier informations">modifier informations</button>
  </form>
   
 </div>

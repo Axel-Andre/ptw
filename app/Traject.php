@@ -15,6 +15,12 @@ class Traject extends Model {
     public function finalLocation() {
         return $this->belongsTo('App\Location', 'final_location');
     }
+    public function tags() {
+        return $this->belongsTo('App\Tags', 'tags_id');
+    }
     
+    public $timestamps = false;
+    
+
 }
 ?>

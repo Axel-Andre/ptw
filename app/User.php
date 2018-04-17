@@ -3,7 +3,7 @@
 namespace App;
 
 use Illuminate\Foundation\Auth\User as Authenticatable;
-
+use App\Traject;
 class User extends Authenticatable
 {
     /**
@@ -24,7 +24,7 @@ class User extends Authenticatable
         'password', 'remember_token',
     ];
     
-    public function trajets() {
+    public function trajects(){
         return $this->hasMany('App\Traject', 'driver_id');
     }
 }

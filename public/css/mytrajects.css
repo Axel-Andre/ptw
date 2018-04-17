@@ -1,6 +1,7 @@
 .my_trajects {
    display : flex;
    justify-content: space-around;
+   width: 100%;
 }
 
 .my_trajects .traject_view {
@@ -13,4 +14,12 @@
     background-color:  #fff;
     padding: 10px 20px;
     margin: 15px;
+}
+
+#displaytags {
+    display :none;
+}
+
+.none {
+   /*display :none;*/
 }
